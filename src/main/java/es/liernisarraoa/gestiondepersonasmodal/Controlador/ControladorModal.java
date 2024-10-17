@@ -38,6 +38,7 @@ public class ControladorModal {
     }
 
     public void cerrarModal(ActionEvent actionEvent) {
+        modal.close();
     }
 
     private void verificacionPersona() {
