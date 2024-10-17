@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class NuevaPersona extends Application {
     private static Scene scene;
-    private static Stage modal;
+    private static Stage modal = new Stage();
 
     public static void main(String[] args) {
         launch(args);
@@ -21,14 +21,12 @@ public class NuevaPersona extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(GestionPersonas.class.getResource("gestionDePersonasModal.fxml"));
         scene = new Scene(fxmlLoader.load(), 500, 300);
-        stage.setTitle("Añadir persona");
-        stage.initModality(Modality.APPLICATION_MODAL);
-        stage.setResizable(false);
-        stage.getIcons().add(new Image(String.valueOf(GestionPersonas.class.getResource("/Imagenes/agenda.png"))));
-        stage.setScene(scene);
-        modal = stage;
-        stage.showAndWait();
-
+        modal.setTitle("Añadir persona");
+        modal.initModality(Modality.APPLICATION_MODAL);
+        modal.setResizable(false);
+        modal.getIcons().add(new Image(String.valueOf(GestionPersonas.class.getResource("/Imagenes/agenda.png"))));
+        modal.setScene(scene);
+        modal.showAndWait();
     }
 
     public static Scene getScene(){
