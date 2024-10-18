@@ -21,7 +21,7 @@ public class GestionPersonas extends Application {
         stage.setScene(scene);
         stage.show();
 
-        //Obtener el controlador y pasar la escena
+        //Obtener el controlador y pasar la escena; Esto sirve para que escenaAplicacion de HelloController no de null
         HelloController controlador = fxmlLoader.getController();
         controlador.setScene(scene);
     }
