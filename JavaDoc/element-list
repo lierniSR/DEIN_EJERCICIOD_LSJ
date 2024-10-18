@@ -1,0 +1,5 @@
+module:es.liernisarraoa.gestiondepersonasmodal
+es.liernisarraoa.gestiondepersonasmodal
+es.liernisarraoa.gestiondepersonasmodal.Controlador
+es.liernisarraoa.gestiondepersonasmodal.Modelo
+es.liernisarraoa.gestiondepersonasmodal.VentanaModal
