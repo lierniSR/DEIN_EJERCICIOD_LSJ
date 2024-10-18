@@ -8,11 +8,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
+<!-- Definición del contenedor principal VBox con sus propiedades -->
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="225.0" prefWidth="378.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.liernisarraoa.gestiondepersonasmodal.Controlador.ControladorModal">
    <children>
+      <!-- HBox para el campo de nombre -->
       <HBox prefHeight="74.0" prefWidth="378.0" VBox.vgrow="ALWAYS">
          <children>
+            <!-- Etiqueta para el nombre -->
             <Label text="Nombre" HBox.hgrow="ALWAYS">
                <font>
                   <Font size="14.0" />
@@ -21,6 +23,7 @@
                   <Insets left="30.0" top="10.0" />
                </HBox.margin>
             </Label>
+            <!-- Campo de texto para ingresar el nombre -->
             <TextField fx:id="nombreTextField" prefHeight="25.0" prefWidth="259.0" HBox.hgrow="ALWAYS">
                <HBox.margin>
                   <Insets left="20.0" top="7.0" right="20.0"/>
@@ -31,8 +34,11 @@
             <Insets top="20.0" />
          </VBox.margin>
       </HBox>
+
+      <!-- HBox para el campo de apellido -->
       <HBox prefHeight="75.0" prefWidth="364.0" VBox.vgrow="ALWAYS">
          <children>
+            <!-- Etiqueta para el apellido -->
             <Label text="Apellido" HBox.hgrow="ALWAYS">
                <font>
                   <Font size="14.0" />
@@ -41,6 +47,7 @@
                   <Insets left="30.0" top="10.0" />
                </HBox.margin>
             </Label>
+            <!-- Campo de texto para ingresar el apellido -->
             <TextField fx:id="apellidoTextField" prefHeight="25.0" prefWidth="259.0" HBox.hgrow="ALWAYS">
                <HBox.margin>
                   <Insets left="20.0" top="7.0" right="20.0" />
@@ -51,8 +58,11 @@
             <Insets top="10.0" />
          </VBox.margin>
       </HBox>
+
+      <!-- HBox para el campo de edad -->
       <HBox prefHeight="77.0" prefWidth="371.0" VBox.vgrow="ALWAYS">
          <children>
+            <!-- Etiqueta para la edad -->
             <Label text="Edad" HBox.hgrow="ALWAYS">
                <font>
                   <Font size="14.0" />
@@ -61,6 +71,7 @@
                   <Insets left="30.0" top="10.0"  />
                </HBox.margin>
             </Label>
+            <!-- Campo de texto para ingresar la edad -->
             <TextField fx:id="edadTextField" prefHeight="25.0" prefWidth="95.0" HBox.hgrow="ALWAYS">
                <HBox.margin>
                   <Insets left="42.0" top="7.0" right="20.0"/>
@@ -71,8 +82,11 @@
             <Insets top="10.0" />
          </VBox.margin>
       </HBox>
+
+      <!-- HBox para los botones de acción -->
       <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
          <children>
+            <!-- Botón para guardar la información -->
             <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#guardarPersona" text="Guardar" HBox.hgrow="ALWAYS">
                <font>
                   <Font size="14.0" />
@@ -81,6 +95,7 @@
                   <Insets top="15.0" />
                </HBox.margin>
             </Button>
+            <!-- Botón para cancelar la operación y cerrar el modal -->
             <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#cerrarModal" text="Cancelar" HBox.hgrow="ALWAYS">
                <HBox.margin>
                   <Insets left="20.0" top="15.0" />

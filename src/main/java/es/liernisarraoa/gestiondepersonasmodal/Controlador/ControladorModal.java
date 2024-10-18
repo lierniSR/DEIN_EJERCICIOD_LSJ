@@ -9,7 +9,12 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-
+/**
+ * Controlador para la ventana modal de creación de una nueva persona.
+ *
+ * @author Lierni
+ * @version 1.0
+ */
 public class ControladorModal {
 
     private Scene escenaAplicacion = NuevaPersona.getScene();
@@ -26,6 +31,12 @@ public class ControladorModal {
     @FXML
     private TextField edadTextField;
 
+    /**
+     * Guarda la información de la nueva persona si los datos son válidos.
+     * Si hay errores en los datos, muestra una alerta.
+     *
+     * @param actionEvent El evento que desencadena esta acción.
+     */
     public void guardarPersona(ActionEvent actionEvent) {
         verificacionPersona();
         if(errores.isEmpty()){
@@ -36,11 +47,20 @@ public class ControladorModal {
         }
     }
 
+    /**
+     * Cierra la ventana modal sin guardar la información.
+     *
+     * @param actionEvent El evento que desencadena esta acción.
+     */
     public void cerrarModal(ActionEvent actionEvent) {
         p = null;
         modal.close();
     }
 
+    /**
+     * Verifica que los datos ingresados para la nueva persona sean válidos.
+     * Almacena los errores encontrados en la variable 'errores'.
+     */
     private void verificacionPersona() {
         errores = "";
         escenaAplicacion = NuevaPersona.getScene();
@@ -61,6 +81,9 @@ public class ControladorModal {
         }
     }
 
+    /**
+     * Muestra una alerta con los errores encontrados durante la verificación de datos.
+     */
     private void alertaError() {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.initOwner(escenaAplicacion.getWindow());
@@ -70,6 +93,11 @@ public class ControladorModal {
         alert.showAndWait();
     }
 
+    /**
+     * Obtiene la persona creada.
+     *
+     * @return La persona creada o null si no se ha creado ninguna.
+     */
     public static Persona getP(){
         return p;
     }

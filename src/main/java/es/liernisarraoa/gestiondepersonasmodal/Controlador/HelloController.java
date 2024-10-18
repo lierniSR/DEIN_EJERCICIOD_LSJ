@@ -62,7 +62,7 @@ public class HelloController implements Initializable {
         scene.initModality(Modality.APPLICATION_MODAL);
         modal.start(scene);
         Persona personaAniadirTabla = ControladorModal.getP();
-        if (!tablaPersonas.getItems().contains(personaAniadirTabla)) {
+        if (!tablaPersonas.getItems().contains(personaAniadirTabla) && personaAniadirTabla != null) {
             alertaAniadirPersona();
             tablaPersonas.getItems().add(personaAniadirTabla);
             tablaPersonas.getSelectionModel().clearSelection();
