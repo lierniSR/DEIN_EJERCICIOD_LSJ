@@ -1,5 +1,6 @@
 package es.liernisarraoa.gestiondepersonasmodal;
 
+import es.liernisarraoa.gestiondepersonasmodal.Controlador.HelloController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -14,18 +15,18 @@ public class GestionPersonas extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(GestionPersonas.class.getResource("gestionDePersonasPrincipal.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 800, 600);
+        scene = new Scene(fxmlLoader.load(), 800, 600);
         stage.setTitle("Gestion de Personas");
         stage.getIcons().add(new Image(String.valueOf(GestionPersonas.class.getResource("/Imagenes/agenda.png"))));
         stage.setScene(scene);
         stage.show();
+
+        //Obtener el controlador y pasar la escena
+        HelloController controlador = fxmlLoader.getController();
+        controlador.setScene(scene);
     }
 
     public static void main(String[] args) {
         launch();
-    }
-
-    public static Scene getScene(){
-        return scene;
     }
 }

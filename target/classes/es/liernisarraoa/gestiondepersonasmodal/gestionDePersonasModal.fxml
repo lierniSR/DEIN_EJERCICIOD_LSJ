@@ -23,7 +23,7 @@
             </Label>
             <TextField fx:id="nombreTextField" prefHeight="25.0" prefWidth="259.0" HBox.hgrow="ALWAYS">
                <HBox.margin>
-                  <Insets left="20.0" top="7.0" />
+                  <Insets left="20.0" top="7.0" right="20.0"/>
                </HBox.margin>
             </TextField>
          </children>
@@ -43,7 +43,7 @@
             </Label>
             <TextField fx:id="apellidoTextField" prefHeight="25.0" prefWidth="259.0" HBox.hgrow="ALWAYS">
                <HBox.margin>
-                  <Insets left="20.0" top="7.0" />
+                  <Insets left="20.0" top="7.0" right="20.0" />
                </HBox.margin>
             </TextField>
          </children>
@@ -58,12 +58,12 @@
                   <Font size="14.0" />
                </font>
                <HBox.margin>
-                  <Insets left="30.0" top="10.0" />
+                  <Insets left="30.0" top="10.0"  />
                </HBox.margin>
             </Label>
             <TextField fx:id="edadTextField" prefHeight="25.0" prefWidth="95.0" HBox.hgrow="ALWAYS">
                <HBox.margin>
-                  <Insets left="42.0" top="7.0" />
+                  <Insets left="42.0" top="7.0" right="20.0"/>
                </HBox.margin>
             </TextField>
          </children>

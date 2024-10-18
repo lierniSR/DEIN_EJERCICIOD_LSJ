@@ -14,7 +14,7 @@ public class ControladorModal {
 
     private Scene escenaAplicacion = NuevaPersona.getScene();
     private Stage modal = NuevaPersona.getStage();
-    private Persona p = null;
+    private static Persona p = null;
     private String errores = "";
 
     @FXML
@@ -30,7 +30,6 @@ public class ControladorModal {
         verificacionPersona();
         if(errores.isEmpty()){
             p = new Persona(nombreTextField.getText(), apellidoTextField.getText(), Integer.valueOf(edadTextField.getText()));
-            alertaAniadirPersona();
             modal.close();
         } else {
             alertaError();
@@ -38,6 +37,7 @@ public class ControladorModal {
     }
 
     public void cerrarModal(ActionEvent actionEvent) {
+        p = null;
         modal.close();
     }
 
@@ -70,12 +70,7 @@ public class ControladorModal {
         alert.showAndWait();
     }
 
-    private void alertaAniadirPersona() {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.initOwner(escenaAplicacion.getWindow());
-        alert.setHeaderText(null);
-        alert.setTitle("Persona añadida");
-        alert.setContentText("Persona añadida correctamente.");
-        alert.showAndWait();
+    public static Persona getP(){
+        return p;
     }
 }

@@ -20,9 +20,9 @@ public class NuevaPersona extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(GestionPersonas.class.getResource("gestionDePersonasModal.fxml"));
+        modal = stage;
         scene = new Scene(fxmlLoader.load(), 500, 300);
         modal.setTitle("Añadir persona");
-        modal.initModality(Modality.APPLICATION_MODAL);
         modal.setResizable(false);
         modal.getIcons().add(new Image(String.valueOf(GestionPersonas.class.getResource("/Imagenes/agenda.png"))));
         modal.setScene(scene);
@@ -36,5 +36,4 @@ public class NuevaPersona extends Application {
     public static Stage getStage(){
         return modal;
     }
-
 }
